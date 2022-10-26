@@ -1,0 +1,32 @@
+
+    @media only screen and (max-width:600px) {
+
+        /***********************seccion *********************************/
+
+        .seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list .precio {
+            font-size: 14px;
+            /* padding: 0px; */
+            height: 23px;
+        }
+        .seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list .precio-p {
+            font-size: 14px;
+            /* padding: 0px; */
+            /* height: 23px; */
+        }
+      
+        .seccion-container .seccion .seccion-flex:nth-child(1) {
+            font-size: 25px;
+        }
+
+
+    }
+
+   
+    @media only screen and (max-width:1400px) {
+        .seccion-container .seccion {
+            grid-column: 2/10;
+            grid-row: 2/8;
+
+        }
+
+    }

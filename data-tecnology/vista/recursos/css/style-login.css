@@ -1,0 +1,47 @@
+
+/*********************************************************seccion main inicio**********************************************/
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.8)), url(../media/tecnologia.jpg);
+    /*para que ocupe la totalidad de los elements*/
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    color: #fff;
+}
+
+.hero .info-content {
+    grid-column: 2/5;
+    grid-row: 3/7;
+}
+
+.hero .info-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.hero .info-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 3em;
+    color: rgb(0, 140, 255);
+
+}
+
+.hero .info-content p {
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero .info-content button {
+    font-size: 1em;
+    background: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 140, 255);
+    border-radius: 30px;
+}

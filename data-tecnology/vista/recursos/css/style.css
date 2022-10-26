@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100;1,200&family=Finlandica:ital@0;1&family=Montserrat:wght@100;300&display=swap');
+
+
+*{
+    scroll-behavior: smooth;
+    font-family: 'Finlandica', sans-serif;
+ 
+}
+
+/********************************************seccion header****************************************************/
+.navbar .menu-bar {
+    /*para que no aparezca en el desktop*/
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    background-color:rgba(21, 116, 196,0.9);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /*propiedades verticalmente*/
+    align-items: center;
+    top: 2%;
+    left: 10%;
+    right: 25%;
+    width: 80%;
+    min-height: 10vh;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.navbar .logo {
+    width: 100%;
+    height: 60px;
+    /*ocupa la la columna  2*/
+    grid-column: 2/ 3;
+    /* padding-right: 10px; */
+    padding-left: 20px;
+    text-align: center;
+}
+
+.navbar .logo .logo-img {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar .title {
+    /*ocupa la la columna  2*/
+    grid-column: 1/ 2;
+    text-align: center;
+    animation: mover 2s infinite;
+    animation-direction: alternate;
+
+}
+
+.navbar .menu {
+    /*ocupa la la columna  4,5 y 6 */
+    grid-column: 3/8;
+    display: flex;
+    align-self: center;
+    /*espacio entre los items propiedade valida de flex*/
+    /* align-content: center; */
+    flex-wrap: wrap;
+    width: 100%;
+    flex-grow: 1;
+
+}
+
+
+
+.navbar .menu li:first-child {
+    /* flex-shrink: 100; */
+    min-width: 15%;
+    /* flex-basis: 300px; */
+
+}
+
+.navbar .menu li:nth-child(3) {
+
+    min-width: 32%;
+
+
+}
+.navbar .menu li {
+    /*quitamos los puntos del  li*/
+    list-style: none;
+    max-width: 60px;
+    transition: all, 0.5s;
+    min-width: 25%;
+    width: 100%;
+    text-align: right;
+    max-width: 60px;
+}
+.navbar .menu li a {
+    display: flex;
+    /*quitamos los subrayados de a*/
+    text-decoration: none;
+    /*para que cambie el cursor s*/
+    cursor: pointer;
+    color: #fff;
+    transition: all, 0.5s;
+    padding-top: 36px;
+    padding-bottom: 36px;
+     /* height: 100px; */
+    justify-content: center;
+}
+
+.navbar .menu li a:hover {
+  
+    transform: translateY(-30%);
+    background-color: rgba(5, 184, 255, 0.5);
+}
+
+.fa-user{
+color: #a3aa23;
+font-size: 30px;
+}
+.navbar .user {
+ transition:all 0.5s;
+}
+.navbar .user:hover{
+    transform: translateY(-30%);
+    background-color: rgba(5, 184, 255, 0.5);
+}
+.navbar .user {
+    grid-column: 8/9;
+    text-align: center;
+    padding-top: 26px;
+    padding-bottom: 26px;
+
+}
+.navbar .user-login{
+    display:none;
+}
+@keyframes mover {
+    0% {
+        transform: translateX(-15%);
+    }
+
+    100% {
+        transform: translateX(15%);
+    }
+}
+ .active{
+    background-color: rgba(5, 184, 255, 0.5); 
+}
+
+
+
+/*********************************redes-sociales***************************/
+.redes-sociales {
+    position: fixed;
+    left: 10px;
+    top: 70%;
+    display: flex;
+    min-height: 20vh;
+    flex-direction: column;
+    font-size: 40px;
+    margin: auto;
+    background-color:gray;
+    z-index: 0;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+.redes-sociales .fa-brands{
+    transition:transform 0.5s;
+}
+.redes-sociales .fa-facebook:hover{
+
+    transform: translateX(10px);
+}
+
+.redes-sociales .fa-youtube:hover {
+  
+    transform: translateX(10px);
+}
+
+.redes-sociales .fa-whatsapp:hover {
+   transform: translateX(10px);
+
+}
+
+
+/*****************************seccion del footer*****************************/
+.footer {
+
+    display: grid;
+    align-items: center;
+    /* justify-content: space-around; */
+    background:  rgba(21, 116, 196,1); ;
+    width: 100%;
+    min-height: 10vh;
+    color: #fff;
+    grid-template-areas:
+        "listen-online follow-me social-network";
+}
+
+.footer .social-network {
+    grid-area: social-network;
+    text-align: center;
+    font-size: 30px;
+}
+
+.footer .listener-online {
+    grid-area: listen-online;
+    text-align: center;
+}
+
+.footer .follow-me {
+    grid-area: follow-me;
+    text-align: center;
+
+}
+
+.fa-facebook {
+    color: rgb(34, 0, 255);
+
+}
+
+.fa-youtube {
+    color: red;
+
+}
+
+.fa-whatsapp {
+color:rgb(6, 179, 6);
+
+}
+
+.footer .fa-brands {
+transition: transform 0.5s;
+   }
+.footer .social-network .fa-facebook:hover {
+ transform:translateY(-10px);
+
+}
+
+.footer .social-network .fa-youtube:hover{
+    transform:translateY(-10px);
+
+}
+
+.footer .social-network .fa-whatsapp:hover{
+
+    transform:translateY(-10px);
+}
+.footer .up{
+ display: none;
+}
+.footer .up-mostrar{
+    display: block;
+    position: fixed;
+    font-size: 40px;
+    color:#000;
+    background:#a3aa23;
+    top:90%;
+    border-radius: 50px;
+    padding:2px 10px;
+    right: 15px;
+}
+.footer .up-mostrar:hover{
+    background:#dce70a;
+
+}
+/****************************************estilos generales ************************************/
+
+
+
+.color {
+   color:#dce70a;
+   font-size: 20px;
+}
+.color-p{
+    color:#dce70a;
+   font-size: 19px;
+}
+
+
+/**************************************estilos play************************************************/
+.play {
+    display: flex;
+    font-size: 50px;
+    color: #a3aa23;
+}
+
+.play .atras {
+    position: absolute;
+    top: 48%;
+    right: 90%;
+    height: auto;
+    width: auto;
+  
+}
+
+.play .siguiente {
+    position: absolute;
+    top: 48%;
+    left: 90%;
+    height: auto;
+    width: auto;
+    z-index: 0;
+}
+
+.play .atras:hover {
+    color: #cdd715;
+}
+
+.play .siguiente:hover {
+    color: #cdd715;
+}

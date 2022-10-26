@@ -1,0 +1,248 @@
+/*********************************************************seccion main **********************************************/
+
+.contenedor-slider {
+    grid-column: 2/10;
+    grid-row: 4/8;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    
+}
+
+.contenedor-slider .contenedor-info {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+ 
+}
+
+.hero {
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0.6)), url(../media/android.jpg);
+    /*para que ocupe la totalidad de los elements*/
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    color: #fff;
+    line-height: 40px;
+    z-index: -100;
+    min-height: 100vh;
+    max-height:100vh;
+}
+
+
+.hero .titulo {
+    grid-column: 2/9;
+    grid-row: 3/4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 1.3em;
+    color: rgb(0, 140, 255);
+
+}
+
+.hero .contenedor-slider .contenedor-info .info-content {
+    background-color: rgba(114, 111, 111, 0.603);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* es como el width */
+    flex-basis: 100%;
+    /*es para que no seda nada de espacio*/
+    flex-shrink: 0;
+    /* para que se pueda encoger todo el contenido */
+    min-width: 100px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.hero .contenedor-slider .contenedor-info .info-content>h2 {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 800;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.hero .contenedor-slider .contenedor-info .info-content .services {
+    display: flex;
+    width: 100%;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    /* flex-grow: 1; */
+    
+}
+
+.hero .contenedor-slider .contenedor-info .info-content i {
+    width: 50px;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.hero .contenedor-slider .contenedor-info  .info-content .services p {
+    width: 300px;
+    margin-left: 20px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+}
+.hero .contenedor-slider .contenedor-info .info-content .services .precio {
+    min-width: 50px;
+    max-width: 100px;
+    background:  rgb(0, 140, 255);
+    border-radius: 10px;
+    margin-right: 5px;
+    padding: 5px;
+    
+}
+
+.hero .contenedor-slider .contenedor-info .info-content .btn {
+    font-size: 1em;
+    background: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 140, 255);
+    border-radius: 30px;
+    width: auto;
+}
+
+.hero .contenedor-slider .contenedor-info .info-content .btn:hover {
+    background: rgb(0, 140, 255);
+    color: #000;
+
+}
+
+/***************************seccion********************************************/
+
+.seccion-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows:60px repeat(6, 1fr) 80px;
+    width: 100%;
+    /* background-color: #3c556a; */
+    /* background:  linear-gradient(circle, transparent, rgb(38, 38, 38)); */
+    /* background:  radial-gradient(circle,rgb(19, 75, 97),rgb(72, 71, 71)); */
+   background-color:rgb(0, 0, 0);
+    /*para que ocupe la totalidad de los elements*/
+   color:#fff;
+}
+
+.seccion-container .seccion {
+    grid-column: 3/9;
+    grid-row: 2/8;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:space-around;
+    width: 100%;
+ 
+}
+
+.seccion-container .seccion .seccion-flex {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius:10px;
+    margin: 5px;
+    max-width: 395px;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:rgba(114, 111, 111, 0.4);
+    box-shadow: 10px 10px 15px 10px #2e2d2d;
+    margin-bottom: 50px;
+    height: 700px;
+}
+.seccion-container .seccion .seccion-flex:nth-child(1){
+    margin: 0;
+    border: none;
+    border-radius:none;
+    background:none;
+    box-shadow: none;
+    margin-bottom: 50px;
+    font-size: 35px;
+    height: 35px;
+    min-width: 100%;
+}
+
+.seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list {
+    display: flex;
+    align-items: center;
+}
+
+.seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list i {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list p {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+    font-weight: 800;
+}
+.seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list h2{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+   color: rgb(26, 150, 251);
+}
+.seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list .precio{
+    margin:0px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+    font-weight: 800;
+    background: rgb(26, 150, 251);
+    padding: 5px;
+    border-radius: 10px;
+    height: 25px;
+    max-width: 200px;
+    min-width: 100px;
+}
+.seccion-container .seccion .seccion-flex .seccion-item .seccion-item-list .precio-p{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 10px;
+    border-bottom: 1px solid #fff;
+
+}
+.seccion-container .seccion .seccion-flex:nth-child(3) .seccion-item .seccion-item-list{
+    margin-bottom: 20px;
+
+}
+.seccion-container .seccion .seccion-flex .seccion-item:first-child .seccion-item-list i{
+   color: rgb(26, 150, 251);
+}
+
+
+.seccion-container .seccion .seccion-flex .seccion-item {
+    align-self: center;
+   max-width: 95%;
+}
+
+.seccion-container .seccion .seccion-flex .seccion-item:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 65%;
+    margin: 10px;
+}
+
+.seccion-container .seccion .seccion-flex .seccion-item:first-child .seccion-item-list {
+    display: block;
+    text-align: center;
+}
